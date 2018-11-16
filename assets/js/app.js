@@ -13,10 +13,11 @@ function getHeadlines() {
         }).then(function(response) {
             articles = response.articles;
             console.log(articles); 
+            var newList = $("<ul>");
             for (var i = 0; i < articles.length; i++) {
-                    var newList = $("<ul>");
+                    
                     var headlines = $("<li>");
-                    headlines.append(`<a href="${articles[i].url}" target="_blank"> ${articles[i].title} </a>
+                    headlines.append(`<a href="${articles[i].url}" target="_blank">${articles[i].title}</a>
                     <p>Posted: ${moment.utc(articles[i].publishedAt).subtract(6, "hours").format('LLLL')}</p>`);
                     newList.append(headlines);    
                     $(".headlines").append(newList); 
