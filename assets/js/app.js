@@ -14,7 +14,7 @@ $.ajax({
         for (var i = 0; i < articles.length; i++) {
         var newList = $("<ul>");
         var headlines = $("<li>");
-        headlines.append(articles[i].title);
+        headlines.append(`<a href="${articles[i].url}"> ${articles[i].title} </a>`);
         newList.append(headlines);    
     $(".headlines").append(newList); 
     }
