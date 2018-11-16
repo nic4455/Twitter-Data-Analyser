@@ -36,3 +36,8 @@ a:hover {
     color: red;
     text-transform: uppercase;
 }
+
+ul {
+    width: 80%;
+    text-align: left;
+}
