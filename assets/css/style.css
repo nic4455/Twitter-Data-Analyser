@@ -21,16 +21,18 @@ ul {
 }
 
 .headlines {
-    border: 4px  #7cc9ed dotted;
+    border: 3px  #7cc9ed inset;
     background-color: mintcream;
     width: 40%;
     margin: auto;
     font-size: .95em;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     overflow: auto;
+    margin-top: 40px;
 }
 
 a:hover {
     color: red;
+    text-transform: uppercase;
 }
