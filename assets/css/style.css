@@ -9,3 +9,11 @@ h1 {
 ul {
     list-style-type: none;
 }
+
+.headlines {
+    border: 2px black dotted;
+    background-color: mintcream;
+    width: 40%;
+    margin: auto 0;
+    font-size: .95em;
+}
