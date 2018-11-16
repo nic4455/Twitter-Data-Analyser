@@ -25,11 +25,12 @@ ul {
     background-color: mintcream;
     width: 40%;
     margin: auto;
-    font-size: .95em;
+    font-size: 1.25em;
     padding-top: 25px;
     padding-bottom: 25px;
-    overflow: auto;
+    overflow-y: scroll;
     margin-top: 40px;
+    max-height: 600px;
 }
 
 a:hover {
