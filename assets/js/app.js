@@ -9,8 +9,8 @@ var articles;
 function getHeadlines() {
     $.ajax({
         url: queryURL,
-        method: "GET"
-        }).then(function(response) {
+        method: "GET",
+        success: function(response) {
             articles = response.articles;
             console.log(articles); 
             var newList = $("<ul>");
@@ -21,9 +21,24 @@ function getHeadlines() {
                     <p>Posted: ${moment.utc(articles[i].publishedAt).subtract(6, "hours").format('LLLL')}</p>`);
                     newList.append(headlines);    
                     $(".headlines").append(newList); 
-        }
+            } 
+        },
+        error: function(response, code, message) {
+            $(".headlines").append(`${code}: ${message}`);
+        },
+    
     });
 } 
 
+var chart = bb.generate({
+    bindto: "#chart",
+    data: {
+        type: "bar",
+        columns: [
+            ["tweet time", 1, 3, 5, 3, 2, 1],
+            
+        ]
+    }
+});
 
 getHeadlines();
