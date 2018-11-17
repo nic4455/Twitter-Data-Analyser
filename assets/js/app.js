@@ -24,7 +24,7 @@ function getHeadlines() {
             } 
         },
         error: function(response, code, message) {
-            $(".headlines").append(`${code}: ${message}`);
+            $(".headlines").append(`There was an ${code}: <p> ${message}`);
         },
     
     });
