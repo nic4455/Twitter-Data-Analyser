@@ -1,6 +1,6 @@
 
 var queryURL = 'https://newsapi.org/v2/top-headlines?' +
-          'sources=fox-news&' +
+          'sources=fox-nws&' +
           'apiKey=1b5b156f36164922908fb04b4a91da79';
 var articles;
 
@@ -23,8 +23,8 @@ function getHeadlines() {
                     $(".headlines").append(newList); 
             } 
         },
-        error: function(response, code, message) {
-            $(".headlines").append(`There was an ${code}: <p> ${message}`);
+        error: function(status, code, message) {
+            $(".headlines").append(`There was an ${code} - ${message}`);
         },
     
     });
