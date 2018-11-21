@@ -34,7 +34,7 @@ function getHeadlines() {
                     <p>Posted: ${moment.utc(articles[i].publishedAt).subtract(6, "hours").format('LLLL')}</p>`);
                     newList.append(headlines);    
 
-                //this is where we would input the div to put the headlines 
+                //this is where we would input the div to put the headlines ".headlines"
                     $(".headlines").append(newList); 
             } 
         },
