@@ -1,6 +1,6 @@
 
 var queryURL = 'https://newsapi.org/v2/top-headlines?' +
-          'sources=fox-nws&' +
+          'sources=fox-news&' +
           'apiKey=1b5b156f36164922908fb04b4a91da79';
 var articles;
 
