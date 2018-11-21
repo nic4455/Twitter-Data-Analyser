@@ -29,6 +29,3 @@ client.get('statuses/user_timeline', params, function (error, tweets, response) 
         }
     }
 });
-
-// Not sure if this command worked or not, but @ianbunn need to research
-// twitter.getUserTimeline({ screen_name: 'POTUS', count: '10' }, error, success);
