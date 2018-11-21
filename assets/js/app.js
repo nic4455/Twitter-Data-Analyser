@@ -1,10 +1,22 @@
 
+
+
+
+
+
+
+
+
+
+
+
+// news apikey and query url set up
 var queryURL = 'https://newsapi.org/v2/top-headlines?' +
           'sources=fox-news&' +
           'apiKey=1b5b156f36164922908fb04b4a91da79';
 var articles;
 
-// function for ajax call to news  API to get an array of Fox News top headlines.
+// function for ajax call to get top 10 headlines and put them in a list and append to div.
 
 function getHeadlines() {
     $.ajax({
@@ -20,9 +32,13 @@ function getHeadlines() {
                     headlines.append(`<a href="${articles[i].url}" target="_blank">${articles[i].title} </a>
                     <p>Posted: ${moment.utc(articles[i].publishedAt).subtract(6, "hours").format('LLLL')}</p>`);
                     newList.append(headlines);    
+
+                //this is where we would input the div to put the headlines 
                     $(".headlines").append(newList); 
             } 
         },
+
+        //error handling message
         error: function(status, code, message) {
             $(".headlines").append(`There was an ${code} - ${message}`);
         },
@@ -30,15 +46,5 @@ function getHeadlines() {
     });
 } 
 
-var chart = bb.generate({
-    bindto: "#chart",
-    data: {
-        type: "bar",
-        columns: [
-            ["tweet time", 1, 3, 5, 3, 2, 1],
-            
-        ]
-    }
-});
-
+//function to call for the headlines to appear
 getHeadlines();
