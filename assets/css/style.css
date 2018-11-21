@@ -1,0 +1,44 @@
+body {
+    background-image: url(../images/background.jpeg);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .95em;
+}
+
+.container {
+    text-align: left;
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+p {
+    font-size: .8em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.headlines {
+    border: 3px  #7cc9ed inset;
+    background-color: mintcream;
+    width: 40%;
+    margin: auto;
+    font-size: 1.25em;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    overflow-y: scroll;
+    margin-top: 40px;
+    max-height: 500px;
+}
+
+a:hover {
+    color: red;
+    text-transform: uppercase;
+}
+
+ul {
+    width: 80%;
+    text-align: left;
+}
