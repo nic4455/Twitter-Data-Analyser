@@ -17,6 +17,7 @@ var queryURL = 'https://newsapi.org/v2/top-headlines?' +
 var articles;
 
 // function for ajax call to get top 10 headlines and put them in a list and append to div.
+// requires jquery and momentjs to run
 
 function getHeadlines() {
     $.ajax({
