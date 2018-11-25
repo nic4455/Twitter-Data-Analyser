@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project 1</title>
-
-
-   
-    
-    
-    <!-- Adding jQCloud CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/billboard.min.css">
     <link rel="stylesheet" href="assets/bower_components/jqcloud2/dist/jqcloud.min.css">
 </head>
+
 <body>
     <div id="keywords"></div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <p id="error"></p>
 
-    <!-- Adding jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <!-- Adding jQCloud JS CDN -->
-    <script src="assets/bower_components/jqcloud2/dist/jqcloud.min.js"></script>
-     <!-- Adding JQCloud JS -->
-     <script src="assets/js/jqcloud.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script src="assets/js/chart.js"></script>
-    <!-- Adding Firebase CDN -->
+    <!-- <script src="assets/bower_components/jqcloud2/dist/jqcloud.min.js"></script>
+    <script src="assets/js/jqcloud.js"></script> -->
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    
-    <!-- Adding app JS -->
-    <script src="assets/js/app.js"></script>
-    
-
+    <script src="chart.js"></script>
+    <!-- <script src="assets/js/app.js"></script> -->
 </body>
 </html>
