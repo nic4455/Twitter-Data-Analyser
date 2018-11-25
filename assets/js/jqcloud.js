@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    
+
+
     var words = [
         { text: "huge", weight: 17 },
         { text: "Melania", weight: 10.5 },
@@ -12,6 +15,8 @@ $(document).ready(function(){
     var trumpsWords =
         $("#keywords").jQCloud(words, {
             width: 500,
-            height: 350
+            height: 350,
+
+
         });
 })
