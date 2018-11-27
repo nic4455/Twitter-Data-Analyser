@@ -17,15 +17,31 @@ var client = new Twitter({
 });
 
 // Declaring parameters for GET below
-var params = { screen_name: 'potus', count: 3 };
+var params = { screen_name: 'realDonaldTrump', count: 3 , tweet_mode: 'extended'};
 // Making GET for tweetsTimestamp and tweetsText
 client.get('statuses/user_timeline', params, function (error, tweets, response) {
+    
     if (!error) {
         for(var v = 0; v < tweets.length; v++){
+            // console.log(tweets)
             var tweetsTimestamp = tweets[v].created_at;
-            var tweetsText = tweets[v].text;
+            var tweetsText = tweets[v].full_text;
 
             console.log(tweetsTimestamp,tweetsText);
         }
     }
 });
+
+/**
+ * Stream statuses filtered by keyword
+ * number of tweets per second depends on topic popularity
+ **/
+// client.stream('statuses/filter', { track: 'Donald Trump' }, function (stream) {
+//     stream.on('data', function (tweet) {
+//         console.log(tweet.text);
+//     });
+
+//     stream.on('error', function (error) {
+//         console.log(error);
+//     });
+// });
