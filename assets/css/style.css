@@ -16,7 +16,7 @@
 
 #index-banner {
     min-height: 232px;
-    max-height: 464px;
+    max-height: 364px;
     position: relative;
     background-color: #2196F3;
 }
@@ -278,4 +278,13 @@ footer.page-footer {
 .news:hover {
     color: red;
     text-transform: uppercase;
+}
+
+h1 {
+    max-height: 50px;
+    padding: 0;
+}
+
+.text_h {
+    padding: 0;
 }
