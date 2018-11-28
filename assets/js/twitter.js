@@ -1,14 +1,27 @@
 // To do items
-//  1 save GET response into vars for @nic and @felix features
-//  1.2 for @nic, save vars for timestamps
-//  1.3 for @felix, save vars for tweets text
 //  2 install a live reload (lr) http server for app
 //  2.1 test lr to make sure app works fine with tweets data
 //  2.2 can we use firebase instead of lr?
 //  2.3 make sure that everyone can connect to app when meeting in person using lr
 
 var Twitter = require('twitter');
+var http = require('http');
+var fs = require('fs');
+var firebase = require('firebase');
 
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyB_zXnNbvnEYRsYGSpumtV-jiADhtmvhtM",
+    authDomain: "utcodingbootcampproject1.firebaseapp.com",
+    databaseURL: "https://utcodingbootcampproject1.firebaseio.com",
+    projectId: "utcodingbootcampproject1",
+    storageBucket: "utcodingbootcampproject1.appspot.com",
+    messagingSenderId: "316462943623"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+
+// Declaring API keys
 var client = new Twitter({
     consumer_key: 'yzN77wlVgq2nGEeJvEcOjsfrK',
     consumer_secret: 'sa4AR1fE3sXxj3ObsfRzN6uRQUzfhUMNIjFzlT6roIBmCG6jO0',
@@ -17,15 +30,59 @@ var client = new Twitter({
 });
 
 // Declaring parameters for GET below
-var params = { screen_name: 'potus', count: 3 };
-// Making GET for tweetsTimestamp and tweetsText
-client.get('statuses/user_timeline', params, function (error, tweets, response) {
-    if (!error) {
-        for(var v = 0; v < tweets.length; v++){
-            var tweetsTimestamp = tweets[v].created_at;
-            var tweetsText = tweets[v].text;
+var params = { screen_name: 'realDonaldTrump', count: 3 , tweet_mode: 'extended'};
 
-            console.log(tweetsTimestamp,tweetsText);
+// GET tweetsTimestamp and tweetsText
+client.get('statuses/user_timeline', params, function (error, tweets, response) {
+    // If no error occurs then run the loop inside
+    if (!error) {
+
+        // Count parameter equals to the tweets length
+        for(var v = 0; v < tweets.length; v++){
+
+            // console.log(tweets)
+
+            // Creating vars for tweets timestamp and full text
+            var tweetsTimestamp = tweets[v].created_at;
+            var tweetsText = tweets[v].full_text;
+
+            console.log(tweetsTimestamp, tweetsText);
+
+            // Pushing tweets to Firebase
+            // database.ref().push({
+            //     tweetText: tweetsText,
+            //     tweetTimestamp: tweetsTimestamp,
+            //     dateAdded: firebase.database.ServerValue.TIMESTAMP
+            // });
         }
     }
 });
+
+/**
+ * Stream statuses filtered by keyword
+ * number of tweets per second depends on topic popularity
+ **/
+// client.stream('statuses/filter', { track: 'Donald Trump' }, function (stream) {
+//     stream.on('data', function (tweet) {
+//         console.log(tweet.text);
+//     });
+
+//     stream.on('error', function (error) {
+//         console.log(error);
+//     });
+// });
+
+// function onRequest(request, response) {
+//     response.writeHead(200, { 'Content-Type': 'text/html' });
+//     fs.readFile('./index.html', null, function (error, data) {
+//         if (error) {
+//             response.writeHead(404);
+//             response.write('File not found!');
+//         } else {
+//             response.write(data);
+//         }
+//         response.end();
+//     });
+// }
+
+// http.createServer(onRequest).listen(8000);

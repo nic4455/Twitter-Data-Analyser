@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/NicolaosJM/Project1#readme",
   "devDependencies": {
+    "firebase": "^5.5.9",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
     "twitter": "^1.7.1"
   }
 }
