@@ -14,10 +14,9 @@
 
 #intro, #work, #team {padding-top: 4rem;}
 
-
 #index-banner {
-    min-height: 632px;
-    max-height: 864px;
+    min-height: 232px;
+    max-height: 464px;
     position: relative;
     background-color: #2196F3;
 }
@@ -261,4 +260,22 @@ nav a.button-collapse {
 
 footer.page-footer {
     margin-top: 0px !important;
+}
+
+.times {
+    font-size: .85em;
+}
+
+.headlines {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.news {
+    font-size: 1.1em;
+}
+
+.news:hover {
+    color: red;
+    text-transform: uppercase;
 }

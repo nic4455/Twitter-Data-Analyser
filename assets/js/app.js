@@ -18,8 +18,8 @@ function getHeadlines() {
             for (var i = 0; i < articles.length; i++) {
                     
                     var headlines = $("<li>");
-                    headlines.append(`<a href="${articles[i].url}" target="_blank">${articles[i].title} </a>
-                    <p>Posted: ${moment.utc(articles[i].publishedAt).subtract(6, "hours").format('LLLL')}</p>`);
+                    headlines.append(`<a href="${articles[i].url}" target="_blank" class="news">${articles[i].title} </a>
+                    <p class="times">Posted: ${moment.utc(articles[i].publishedAt).subtract(6, "hours").format('LLLL')}</p>`);
                     newList.append(headlines);    
 
                 //this is where we would input the div to put the headlines ".headlines"
@@ -37,3 +37,5 @@ function getHeadlines() {
 
 //function to call for the headlines to appear
 getHeadlines();
+
+
