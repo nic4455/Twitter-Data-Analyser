@@ -1,33 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>Trump Insights</title>
 
+    <!-- CSS  -->
+    <link href="assets/min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="assets/min/custom-min.css" type="text/css" rel="stylesheet" >
+    <!-- Adding jQCloud CSS CDN -->
+    <link rel="stylesheet" href="assets/bower_components/jqcloud2/dist/jqcloud.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 
     <!-- Adding jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
 
-    <!-- Adding jQCloud JS CDN -->
+     <!-- Adding jQCloud JS CDN -->
     <script src="assets/bower_components/jqcloud2/dist/jqcloud.min.js"></script>
     
-    <!-- Adding jQCloud CSS CDN -->
-    <link rel="stylesheet" href="assets/bower_components/jqcloud2/dist/jqcloud.min.css">
-</head>
-<body>
-    <div id="keywords"></div>
+    
+     <!--Adding moment JS CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
+</head>
+<body id="top" class="scrollspy">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="#" id="logo-container" class="brand-logo">Trump Insights</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#intro">News & Tweets</a></li>
+                    <li><a href="#work">Cloud</a></li>
+                    <li><a href="#team">Bargraph</a></li>
+                    <li><a href="#contact">Team</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#intro">News & Tweets</a></li>
+                    <li><a href="#work">Cloud</a></li>
+                    <li><a href="#team">Bargraph</a></li>
+                    <li><a href="#contact">Team</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!--Hero-->
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <h1 class="text_h center header cd-headline letters type">
+            <span>POTUS</span> 
+            <span class="cd-words-wrapper waiting">
+                <b class="is-visible">news</b>
+                <b>tweets</b>
+                <b>insights</b>
+            </span>
+        </h1>
+    </div>
+</div>
+
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <h2 class="center header text_h2"> Tweets and news headlines </h2>
+            </div>
+
+            <div  class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <h5 class="promo-caption">Recent Tweets</h5>
+                    <p class="light center">Place div with vertical scrollbar here.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <h5 class="promo-caption">In the News</h5>
+                    <p class="light center"><div class="headlines"></div></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Work-->
+<div class="section scrollspy" id="team">
+    <div class="container">
+        <h2 class="center header text_h2"> Favorite Words </h2>
+        <div class="row">
+<img src="assets/img/jqcloud.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Bargraph-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <h2 class="center header text_h2"> Most Talkative Times </h2>
+            </div>
+           <img src="assets/img/bar-graph-example.png" width="75%"><br><br><br><br>
+        </div>
+    </div>
+</div>
+
+<!--Parallax-->
+<div class="parallax-container">
+    <div class="parallax"><img src="assets/img/donald-2070079_960_720.jpg"></div>
+</div>
+
+<!--Team-->
+<div class="section scrollspy" id="team">
+    <div class="container">
+        <h2 class="header text_b"> Our Team </h2>
+        <div class="row">
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/profile-picture-placeholder.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Nicolaos May <br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Twitter API</a></em></small></span>
+                            <p>
+                                <a class="blue-text text-lighten-2" href="https://www.facebook.com/userid">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a class="blue-text text-lighten-2" href="https://twitter.com/userid">
+                                    <i class="fa fa-twitter-square"></i>
+                                </a>
+                                </a>
+                                <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/userid">
+                                    <i class="fa fa-linkedin-square"></i>
+                                </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/profile-picture-placeholder.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Harpal Assi<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">News API</a></em></small>
+                        </span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/userid">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/userid">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/userid">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/profile-picture-placeholder.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                            Felix Asare <br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Bargraph</a></em></small></span>
+                            <p>
+                                <a class="blue-text text-lighten-2" href="https://www.facebook.com/userid">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a class="blue-text text-lighten-2" href="https://twitter.com/userid">
+                                    <i class="fa fa-twitter-square"></i>
+                                </a>
+                                </a>
+                                <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/userid">
+                                    <i class="fa fa-linkedin-square"></i>
+                                </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/profile-picture-placeholder.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Ian<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">DevOps</a></em></small></span>
+                            <p>
+                                <a class="blue-text text-lighten-2" href="https://www.facebook.com/userid">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a class="blue-text text-lighten-2" href="https://twitter.com/userid">
+                                    <i class="fa fa-twitter-square"></i>
+                                </a>
+                                </a>
+                                <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/userid">
+                                    <i class="fa fa-linkedin-square"></i>
+                                </a>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/profile-picture-placeholder.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Nathan Smith<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Frontend Design</a></em></small></span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/userid">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/userid">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/userid">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+
+    <div class="footer-copyright default_color">
+        <div class="container">
+            Copyright © 2018 <i>Trump Reporter</i>. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="assets/min/plugin-min.js"></script>
+    <script src="assets/min/custom-min.js"></script>
     <!-- Adding Firebase CDN -->
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     
     <!-- Adding JQCloud JS -->
     <script src="assets/js/jqcloud.js"></script>
 
+     <!-- Twitter JS -->
+    <script src="assets/js/twitter.js"></script>
     <!-- Adding app JS -->
     <script src="assets/js/app.js"></script>
 
-</body>
+    </body>
 </html>

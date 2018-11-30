@@ -1,0 +1,35 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "This application curates tweets by President Donald Trump and the political news via news API and assists the user in drawing a correlation between the data.",
+  "main": "assets/js/twitter.js",
+  "scripts": {
+    "test": "node project1 start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolaosJM/Project1.git"
+  },
+  "keywords": [
+    "twitter",
+    "news",
+    "api",
+    "word",
+    "cloud",
+    "chart",
+    "billboard",
+    "js"
+  ],
+  "author": "team project",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolaosJM/Project1/issues"
+  },
+  "homepage": "https://github.com/NicolaosJM/Project1#readme",
+  "devDependencies": {
+    "firebase": "^5.5.9",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "twitter": "^1.7.1"
+  }
+}

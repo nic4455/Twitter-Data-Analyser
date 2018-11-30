@@ -2,6 +2,14 @@ $(document).ready(function(){
     
 
 
+    // grab tweets
+
+    // split tweet into words array
+
+    // count the number of occurrences
+
+    // assign it to weight
+
     var words = [
         { text: "huge", weight: 17 },
         { text: "Melania", weight: 10.5 },
