@@ -47,7 +47,7 @@ $(document).ready(function () {
         console.log('normalizedddd ======>', normalizedCloudWords)
 
         $("#cloudContent").jQCloud(bigArray, {
-            width: 900,
+            width: 1200,
             shape: "rectangular",
             height: 700,
         });
