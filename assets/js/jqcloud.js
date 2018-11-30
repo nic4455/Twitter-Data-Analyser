@@ -47,9 +47,9 @@ $(document).ready(function () {
         console.log('normalizedddd ======>', normalizedCloudWords)
 
         $("#cloudContent").jQCloud(bigArray, {
-            width: 900,
             shape: "rectangular",
-            height: 700,
+            center: {x:0.5, y:0.5},
+            autoResize: true
         });
     });
 })
