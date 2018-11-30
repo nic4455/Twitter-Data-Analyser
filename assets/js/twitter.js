@@ -1,13 +1,7 @@
-// To do items
-//  2 install a live reload (lr) http server for app
-//  2.1 test lr to make sure app works fine with tweets data
-//  2.2 can we use firebase instead of lr?
-//  2.3 make sure that everyone can connect to app when meeting in person using lr
-
-var Twitter = require('twitter');
-var http = require('http');
-var fs = require('fs');
-var firebase = require('firebase');
+// var Twitter = require('twitter');
+// var http = require('http');
+// var fs = require('fs');
+// var firebase = require('firebase');
 
 // Initialize Firebase
 var config = {
@@ -22,41 +16,41 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 // Declaring API keys
-var client = new Twitter({
-    consumer_key: 'yzN77wlVgq2nGEeJvEcOjsfrK',
-    consumer_secret: 'sa4AR1fE3sXxj3ObsfRzN6uRQUzfhUMNIjFzlT6roIBmCG6jO0',
-    access_token_key: '21171830-Sqkf5YcRIpkt9Lg6kfHnFLr7z1MnoDl0GreZq52wD',
-    access_token_secret: 'fwCQG8mAvTtUF8JqH2B3R2F8IJ5v6UkrXgRhfiBCp4ZTE'
-});
+// var client = new Twitter({
+//     consumer_key: 'yzN77wlVgq2nGEeJvEcOjsfrK',
+//     consumer_secret: 'sa4AR1fE3sXxj3ObsfRzN6uRQUzfhUMNIjFzlT6roIBmCG6jO0',
+//     access_token_key: '21171830-Sqkf5YcRIpkt9Lg6kfHnFLr7z1MnoDl0GreZq52wD',
+//     access_token_secret: 'fwCQG8mAvTtUF8JqH2B3R2F8IJ5v6UkrXgRhfiBCp4ZTE'
+// });
 
 // Declaring parameters for GET below
-var params = { screen_name: 'realDonaldTrump', count: 3 , tweet_mode: 'extended'};
+// var params = { screen_name: 'realDonaldTrump', count: 3 , tweet_mode: 'extended'};
 
 // GET tweetsTimestamp and tweetsText
-client.get('statuses/user_timeline', params, function (error, tweets, response) {
-    // If no error occurs then run the loop inside
-    if (!error) {
+// client.get('statuses/user_timeline', params, function (error, tweets, response) {
+//     // If no error occurs then run the loop inside
+//     if (!error) {
 
-        // Count parameter equals to the tweets length
-        for(var v = 0; v < tweets.length; v++){
+//         // Count parameter equals to the tweets length
+//         for(var v = 0; v < tweets.length; v++){
 
-            // console.log(tweets)
+//             // console.log(tweets)
 
-            // Creating vars for tweets timestamp and full text
-            var tweetsTimestamp = tweets[v].created_at;
-            var tweetsText = tweets[v].full_text;
+//             // Creating vars for tweets timestamp and full text
+//             var tweetsTimestamp = tweets[v].created_at;
+//             var tweetsText = tweets[v].full_text;
 
-            console.log(tweetsTimestamp, tweetsText);
+//             console.log(tweetsTimestamp, tweetsText);
 
-            // Pushing tweets to Firebase
-            // database.ref().push({
-            //     tweetText: tweetsText,
-            //     tweetTimestamp: tweetsTimestamp,
-            //     dateAdded: firebase.database.ServerValue.TIMESTAMP
-            // });
-        }
-    }
-});
+//             // Pushing tweets to Firebase
+//             // database.ref().push({
+//             //     tweetText: tweetsText,
+//             //     tweetTimestamp: tweetsTimestamp,
+//             //     dateAdded: firebase.database.ServerValue.TIMESTAMP
+//             // });
+//         }
+//     }
+// });
 
 /**
  * Stream statuses filtered by keyword
@@ -72,6 +66,7 @@ client.get('statuses/user_timeline', params, function (error, tweets, response) 
 //     });
 // });
 
+// Live reload server
 // function onRequest(request, response) {
 //     response.writeHead(200, { 'Content-Type': 'text/html' });
 //     fs.readFile('./index.html', null, function (error, data) {
