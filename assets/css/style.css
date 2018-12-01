@@ -3,7 +3,55 @@
  *
  * Trump Insight Project
  */
+ #cloudContent {
+    width: 1100px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto
+}
+@media screen and (max-width: 1280px) {
+    #cloudContent {
+        width: 900px;
+        height: 800px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+@media screen and (max-width: 980px) {
+    #cloudContent {
+        width: 700px;
+        height: 800px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
 
+@media screen and (max-width: 768px) {
+    #cloudContent {
+        width: 650px;
+        height: 800px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #cloudContent {
+        width: 550px;
+        height: 800px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #cloudContent {
+        width: 400px;
+        height: 800px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
 .default_color{background-color: #2196F3 !important}
 
 .default_color_text{color: #2196F3 !important}
