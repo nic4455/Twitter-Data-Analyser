@@ -34,7 +34,7 @@ $(document).ready(function () {
         };
         var objectWordNum = compressArray(tweetWordArray)
         const removeBoringWords = objectWordNum.filter(word => {
-            return (word.value !== 'the' && word.value !== 'to' && word.value !== 'is' && word.value !== 'with' && word.value !== 'of' && word.value !== 'in' && word.value !== '....' && word.value !== 'a' && word.value !== 'that' && word.value !== 'and' && word.value !== 'are' && word.value !== 'at' && word.value !== 'RT' && word.value !== 'they' && word.value !== 'on' && word.value !== 'have' && word.value !== 'this' && word.value !== 'for' && word.value !== 'all' && word.value !== 'The' && word.value !== 'has' && word.value !== 'be' && word.value !== 'very' && word.value !== 'it' && word.value !== 'will' && word.value !== 'just' && word.value !== 'I')
+            return (word.value !== 'the' && word.value !== 'to' && word.value !== 'is' && word.value !== 'with' && word.value !== 'of' && word.value !== 'in' && word.value !== '....' && word.value !== 'a' && word.value !== 'that' && word.value !== 'and' && word.value !== 'are' && word.value !== 'at' && word.value !== 'RT' && word.value !== 'they' && word.value !== 'on' && word.value !== 'have' && word.value !== 'this' && word.value !== 'for' && word.value !== 'all' && word.value !== 'The' && word.value !== 'has' && word.value !== 'be' && word.value !== 'very' && word.value !== 'it' && word.value !== 'will' && word.value !== 'just' && word.value !== 'an' && word.value !== "&amp;" && word.value !== "not" && word.value !== "-" && word.value !== "A" && word.value !== "I")
         })
         console.log("objectwordnum", removeBoringWords);
         console.log(' boring wordssss====>', removeBoringWords)
